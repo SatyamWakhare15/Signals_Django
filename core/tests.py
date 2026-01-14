@@ -1,6 +1,3 @@
-from django.test import TestCase
-
-# Create your tests here.
 import threading
 from django.db import transaction
 from django.test import TestCase
