@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
 
+
+# url patterns
 urlpatterns = [
-    path('', include('core.urls')),      # homepage from core app
-    path('admin/', admin.site.urls),
+    path('', include('core.urls')),  # core app urls
+    path('admin/', admin.site.urls),  # admin panel
 ]

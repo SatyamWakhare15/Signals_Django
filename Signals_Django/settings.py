@@ -1,7 +1,10 @@
 from pathlib import Path
 
+# base directory path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+# installed apps list
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -9,10 +12,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'core.apps.CoreConfig',   # your custom app
+    
+    'core.apps.CoreConfig',  # my app
 ]
 
+
+# middleware settings
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -23,6 +28,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+# template configuration
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -39,6 +46,8 @@ TEMPLATES = [
     },
 ]
 
+
+# database config - using sqlite
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -46,7 +55,10 @@ DATABASES = {
     }
 }
 
+
+# debug mode off for production
 DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
 
 ROOT_URLCONF = 'Signals_Django.urls'
